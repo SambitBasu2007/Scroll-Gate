@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kage — Afterlight</title>
+<style>
+    :root {
+        --ink: #1a1a1a;
+        --bone: #f5f5f0;
+        --muted: #666;
+        --pad: clamp(20px, 4vw, 64px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: "Georgia", "Times New Roman", serif;
+        background: var(--bone);
+        color: var(--ink);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: var(--pad);
+        flex: 1;
+    }
+
+    header {
+        margin-bottom: 4em;
+    }
+
+    header p {
+        font-size: 11px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    h1 {
+        font-size: clamp(28px, 5vw, 48px);
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0.5em 0 1em;
+        color: #2a2a2a;
+    }
+
+    .body-text {
+        font-size: clamp(15px, 1.3vw, 18px);
+        color: #444;
+        max-width: 52ch;
+    }
+
+    .body-text p {
+        margin: 0 0 1.2em;
+    }
+
+    .body-text p:first-child::first-letter {
+        font-size: 3.2em;
+        float: left;
+        line-height: 0.8;
+        margin: 0.05em 0.1em 0 -0.05em;
+        color: #2a2a2a;
+    }
+
+    .divider {
+        width: 40px;
+        height: 1px;
+        background: #ccc;
+        margin: 3em 0;
+    }
+
+    footer {
+        padding: var(--pad);
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: .12em;
+        color: var(--muted);
+        border-top: 1px solid #e0e0e0;
+    }
+
+    /* Entrance animation */
+    .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: revealIn 0.6s ease-out forwards;
+    }
+    .reveal:nth-child(1) { animation-delay: 0.05s; }
+    .reveal:nth-child(2) { animation-delay: 0.1s; }
+    .reveal:nth-child(3) { animation-delay: 0.15s; }
+    .reveal:nth-child(4) { animation-delay: 0.2s; }
+    .reveal:nth-child(5) { animation-delay: 0.25s; }
+    .reveal:nth-child(6) { animation-delay: 0.3s; }
+    @keyframes revealIn {
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; animation: none !important; }
+        .reveal { opacity: 1 !important; transform: none !important; }
+    }
+</style>
+</head>
+<body>
+    <main>
+        <header class="reveal">
+            <p>Afterlight</p>
+        </header>
+
+        <h1 class="reveal">The walk is over,<br>but the path remains.</h1>
+
+        <div class="body-text reveal">
+            <p>You have passed through the gate and into the hall. The moonlight that fell
+                on the worn stones was the same light that has fallen there for centuries,
+                patient and unchanging.</p>
+
+            <p>There is nothing more to see here. The temple does not ask for your
+                attention — it only asks that you were present for the walk.</p>
+
+            <p>Return whenever the noise gets loud. The path is always the same,
+                and never the same light.</p>
+        </div>
+
+        <div class="divider reveal"></div>
+
+        <p class="body-text reveal" style="font-size: 13px; color: #888;">
+            <a href="./" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Return to the gate</a>
+        </p>
+    </main>
+
+    <footer class="reveal">
+        <p>KAGE — a quiet mountain temple</p>
+    </footer>
+</body>
+</html>

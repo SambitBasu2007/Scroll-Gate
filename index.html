@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Kage — a quiet mountain temple</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="top">
+
+    <canvas id="scene"></canvas>
+
+    <div id="fade-overlay" aria-hidden="true"></div>
+
+    <nav id="nav">
+        <a class="brand" href="#top">
+            <span class="crest">影</span>
+            <span class="brand-tx">KAGE</span>
+        </a>
+        <div class="nav-links">
+            <a href="#gate">The Gate</a>
+            <a href="#temple">The Temple</a>
+            <a href="#afterlight">Afterlight</a>
+        </div>
+
+    </nav>
+
+    <section class="hero" id="hero" data-cam="0">
+        <div class="hero-top">
+            <div class="eyebrow"><span class="dot"></span> Chapter 00 — JAPANESE SOMETHING</div>
+            <h1 class="display h-hero">
+                <span class="ln">Hi</span>
+                <span class="ln">placeholder</span>
+                <span class="ln">something</span>
+            </h1>
+            <p class="hero-sub"> i think this will be useful for mosaic but idk man. Looks cool tho</p>
+        </div>
+        <div class="hero-foot">
+            <div class="hero-cue"><span>Scroll to enter</span><span class="cue-track"><i></i></span></div>
+            <div class="chip-row">
+                <span class="chip">01 <b>Thresholds</b></span>
+                <span class="chip">02 <b>The Approach</b></span>
+                <span class="chip">03 <b>Afterlight</b></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec" id="gate" data-cam="1">
+        <div class="sec-head"><span class="k"><b>01</b> — The Sanmon</span><span class="rule"></span><span
+                class="k jp">山門</span></div>
+        <div class="sec-grid">
+            <h2 class="display h-sec">Charred cypress, worn stone, one gate left open.</h2>
+            <div class="sec-copy">
+                <p class="lead">Kage begins where the road stops: a mountain gate burned black by hand,
+                    standing in its own weather. Nothing here is decoration — the soot is how a board learns
+                    to survive a hundred rainy seasons.</p>
+                <p class="body">Climb the worn steps and the hall lifts out of the dark, its paper screens lit
+                    from inside. Above the roofline a vermilion moon holds its place, patient, half hidden.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- invisible camera waypoints for 3D stair sequence -->
+    <section class="cam-only" data-cam="2"></section>
+    <section class="cam-only" data-cam="3"></section>
+    <section class="cam-only" data-cam="4"></section>
+    <section class="cam-only" data-cam="5"></section>
+
+    <section class="sec" id="temple" data-cam="6">
+        <div class="sec-head"><span class="k"><b>02</b> — The Approach</span><span class="rule"></span><span
+                class="k jp">参道</span></div>
+        <div class="sec-grid">
+            <h2 class="display h-sec">Every lantern marks a step someone chose to slow down.</h2>
+            <div class="sec-copy">
+                <p class="lead">The path between the gates is not the fastest way up the hill —
+                    it was never meant to be. Each stone lantern is placed exactly where the climb
+                    would otherwise ask you to hurry.</p>
+                <p class="body">By the second torii the city noise is gone, and only the sound of your
+                    own steps on wet slate is left.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- invisible camera waypoints for door approach -->
+    <section class="cam-only" data-cam="7"></section>
+    <section class="cam-only" data-cam="8"></section>
+
+    <section class="sec fin" id="afterlight" data-cam="9">
+        <div class="eyebrow">Chapter 03 — Afterlight</div>
+        <h2 class="display h-fin">Afterlight</h2>
+        <p class="body-lg">The gate does not close behind you. Take the walk whenever the noise
+            gets loud — it is always the same path, and never the same light.</p>
+    </section>
+
+    <div class="track-end" data-cam="10"></div>
+
+    <script type="module" src="./scene.js"></script>
+</body>
+
+</html>
