@@ -1,6 +1,3 @@
-https://sambitbasu2007.github.io/Scroll-Gate/
-
-
 # Kage — Lite v2
 
 A condensed, fully procedural re-read of the reference "Kage" site: a
